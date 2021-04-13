@@ -1,0 +1,57 @@
+nav {
+	background-color: LightCoral;
+}
+
+#navheading {
+	color: #000000
+}
+
+#navname {
+	color: #fff3d4;
+}
+
+#navlink {
+	color: #000000;
+	text-decoration: underline;
+}
+
+body {
+	background-image:
+		url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaoHC_DFKfrGgBdaa_j8jB8DY-fc0e-0Ed3Q&usqp=CAU");
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 100%;
+}
+
+#formheading {
+	color: #fff3d4;
+}
+
+.card {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.gj-picker {
+	color: #976536;
+}
+
+.form-control {
+	background-color: rgba(255, 255, 255, 0.5);
+	border: none;
+}
+
+footer {
+	background-color: rgba(0, 0, 0, 0.8);
+	height: 3rem;
+	margin-top: 2%;
+	position: relative;
+	bottom: 0;
+	color: #fff3d4;
+}
+
+
+button.input-group-append{
+	border:none;
+}
