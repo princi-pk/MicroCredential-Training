@@ -53,6 +53,18 @@ public class CustomerRegistrationController {
 		return repo.findAll();
 	}
 	
+	@PutMapping("/update/{userId}")
+	public String updateAccountDetails(@PathVariable(value="userId") int userId, @RequestBody Customer updatedCustomer) {
+		Boolean isPresent=repo.findById(userId).isPresent();
+		if(isPresent) {
+			service.updateAccount(updatedCustomer, userId);
+			repo.save(updatedCustomer);
+			return "Account details updated";
+		}
+		return "User not found";
+	}
+	
+	
 /*	@GetMapping("/login")
 	public String loginPage() {
 		return "login";
