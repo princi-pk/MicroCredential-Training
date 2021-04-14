@@ -35,4 +35,21 @@ public class CustomerService {
 		}
 		return false;
 	}
+	
+	public void updateAccount(Customer customer, int userId) {
+		List<Customer> listOfCustomers=custRepo.findAll();
+		for(Customer c : listOfCustomers) {
+			if(c.getUserId()==userId) {
+				c.setName(customer.getName());
+				c.setEmail(customer.getEmail());
+				c.setAddress(customer.getAddress());
+				c.setContactNumber(customer.getContactNumber());
+				c.setCountry(customer.getCountry());
+				c.setPanNumber(customer.getPanNumber());
+				c.setPassword(customer.getPassword());
+				c.setState(customer.getState());
+				c.setTypeOfAccount(customer.getTypeOfAccount());
+			}
+		}
+	}
 }
