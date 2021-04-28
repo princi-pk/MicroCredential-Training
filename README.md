@@ -1,1 +1,1 @@
-# MicroCredential-Training-Milestone 1
+# MicroCredential-Training
