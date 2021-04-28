@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="6" time="0.499">
+    <testcase classname="Login functionality" name="Successful login" time="0.194">
+        <system-out>
+            <![CDATA[Given I set post login endpoint.............................................passed
+When I enter the user id 101, password "pass"...............................passed
+Then "Login successful" message appears on the screen.......................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Login functionality" name="Unsuccessful login due to incorrect password" time="0.005">
+        <system-out>
+            <![CDATA[Given I set POST HTTP request...............................................passed
+When I enter the user id 101, password "aaaa" and submit....................passed
+Then I should get "Incorrect password"......................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Login functionality" name="Unsuccessful login as user doesn't exist" time="0.013">
+        <system-out>
+            <![CDATA[Given I set post end point..................................................passed
+When User id is 66 and password is "pass"...................................passed
+Then I expect "User id doesn't exist".......................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Account details update" name="Successful updation of account details" time="0.004">
+        <system-out>
+            <![CDATA[Given I set POST request for account update.................................passed
+When I enter the user acccount details......................................passed
+Then I get "Lily, your account details are updated successfully" message....passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Account details update" name="User id does not exist" time="0.004">
+        <system-out>
+            <![CDATA[Given I type the url for account update.....................................passed
+When I enter invalid user id................................................passed
+Then Error message appears: "User id 33 doesn't exist"......................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Account details update" name="User id does not match" time="0.003">
+        <system-out>
+            <![CDATA[Given I give post endpoint..................................................passed
+When I pass wrong user id in user account details...........................passed
+Then I receive "User id doesn't match" notification.........................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
