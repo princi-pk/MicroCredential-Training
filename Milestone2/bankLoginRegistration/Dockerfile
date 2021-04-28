@@ -1,4 +1,4 @@
 FROM openjdk:8
 EXPOSE 8888
-ADD target/cloudloginregistration-docker.jar cloudloginregistration-docker.jar
-ENTRYPOINT ["java","-jar","/cloudloginregistration-docker.jar"]
+ADD target/cloud-loginregistration-docker.jar cloud-loginregistration-docker.jar
+ENTRYPOINT ["java","-jar","/cloud-loginregistration-docker.jar"]
