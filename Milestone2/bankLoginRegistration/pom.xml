@@ -63,7 +63,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-		<finalName>cloudloginregistration-docker</finalName>
+		<finalName>cloud-loginregistration-docker</finalName>
 	</build>
 
 </project>
