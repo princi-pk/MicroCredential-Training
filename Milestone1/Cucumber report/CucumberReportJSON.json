@@ -1,0 +1,368 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-04-27T08:54:01.268Z",
+        "line": 4,
+        "name": "Successful login",
+        "description": "",
+        "id": "login-functionality;successful-login",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 93741100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I set post login endpoint",
+            "match": {
+              "location": "steps.LoginSteps.i_set_post_login_endpoint()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 10744600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I enter the user id 101, password \"pass\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "101",
+                  "offset": 20
+                },
+                {
+                  "val": "\"pass\"",
+                  "offset": 34
+                }
+              ],
+              "location": "steps.LoginSteps.loginCredentials(int,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2935400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "\"Login successful\" message appears on the screen",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Login successful\"",
+                  "offset": 0
+                }
+              ],
+              "location": "steps.LoginSteps.successfulResult(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-04-27T08:54:01.476Z",
+        "line": 9,
+        "name": "Unsuccessful login due to incorrect password",
+        "description": "",
+        "id": "login-functionality;unsuccessful-login-due-to-incorrect-password",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I set POST HTTP request",
+            "match": {
+              "location": "steps.LoginSteps.posthttpRequest()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1021000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I enter the user id 101, password \"aaaa\" and submit",
+            "match": {
+              "arguments": [
+                {
+                  "val": "101",
+                  "offset": 20
+                },
+                {
+                  "val": "\"aaaa\"",
+                  "offset": 34
+                }
+              ],
+              "location": "steps.LoginSteps.inputUserdetails(int,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I should get \"Incorrect password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Incorrect password\"",
+                  "offset": 13
+                }
+              ],
+              "location": "steps.LoginSteps.unsuccessfulResultAsIncorrectPassword(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-04-27T08:54:01.488Z",
+        "line": 14,
+        "name": "Unsuccessful login as user doesn\u0027t exist",
+        "description": "",
+        "id": "login-functionality;unsuccessful-login-as-user-doesn-t-exist",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1951900,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I set post end point",
+            "match": {
+              "location": "steps.LoginSteps.setpostEndPoint()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 8788800,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "User id is 66 and password is \"pass\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "66",
+                  "offset": 11
+                },
+                {
+                  "val": "\"pass\"",
+                  "offset": 30
+                }
+              ],
+              "location": "steps.LoginSteps.i_enter_user_id_password(int,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 975900,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I expect \"User id doesn\u0027t exist\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User id doesn\u0027t exist\"",
+                  "offset": 9
+                }
+              ],
+              "location": "steps.LoginSteps.unsuccessfulResultAsWrongUserId(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login functionality",
+    "description": "",
+    "id": "login-functionality",
+    "keyword": "Feature",
+    "uri": "file:features/login.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-04-27T08:54:01.507Z",
+        "line": 3,
+        "name": "Successful updation of account details",
+        "description": "",
+        "id": "account-details-update;successful-updation-of-account-details",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 977700,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I set POST request for account update",
+            "match": {
+              "location": "steps.UpdateDetailsSteps.i_set_POST_request_for_account_update()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 976000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I enter the user acccount details",
+            "match": {
+              "location": "steps.UpdateDetailsSteps.i_enter_the_user_acccount_details()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I get \"Lily, your account details are updated successfully\" message",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lily, your account details are updated successfully\"",
+                  "offset": 6
+                }
+              ],
+              "location": "steps.UpdateDetailsSteps.i_get_message(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-04-27T08:54:01.521Z",
+        "line": 8,
+        "name": "User id does not exist",
+        "description": "",
+        "id": "account-details-update;user-id-does-not-exist",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I type the url for account update",
+            "match": {
+              "location": "steps.UpdateDetailsSteps.i_type_the_url_for_account_update()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1947000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I enter invalid user id",
+            "match": {
+              "location": "steps.UpdateDetailsSteps.enterInvalidUserId()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 972800,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Error message appears: \"User id 33 doesn\u0027t exist\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User id 33 doesn\u0027t exist\"",
+                  "offset": 23
+                }
+              ],
+              "location": "steps.UpdateDetailsSteps.error_message_appears(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-04-27T08:54:01.530Z",
+        "line": 13,
+        "name": "User id does not match",
+        "description": "",
+        "id": "account-details-update;user-id-does-not-match",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 980800,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I give post endpoint",
+            "match": {
+              "location": "steps.UpdateDetailsSteps.i_give_post_endpoint()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 973300,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I pass wrong user id in user account details",
+            "match": {
+              "location": "steps.UpdateDetailsSteps.userDetailsEntered()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 979900,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I receive \"User id doesn\u0027t match\" notification",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"User id doesn\u0027t match\"",
+                  "offset": 10
+                }
+              ],
+              "location": "steps.UpdateDetailsSteps.i_receive_notification(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Account details update",
+    "description": "",
+    "id": "account-details-update",
+    "keyword": "Feature",
+    "uri": "file:features/updateDetails.feature",
+    "tags": []
+  }
+]
