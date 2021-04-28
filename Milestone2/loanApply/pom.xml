@@ -80,7 +80,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-		<finalName>cloudapplyloan-docker</finalName>
+		<finalName>cloud-applyloan-docker</finalName>
 	</build>
 
 </project>
